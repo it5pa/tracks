@@ -1,0 +1,547 @@
+/* general */
+body {
+  font-family: 'Arial Narrow', sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  color: #605f6b;
+}
+p {
+  color: #605f6b;
+  margin-top: 0;
+  margin-bottom: 0.3em;
+}
+a {
+  color: inherit;
+  cursor: help;
+}
+h1,
+h2 {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+/* #season1 {
+  color:blue;
+} */
+
+/* top navigation */
+.top-nav {
+  display: flex;
+  padding-right: 40px;
+  padding-left: 43px;
+  /* width: 900px; */
+  position: fixed;
+  top: 4vh;
+}
+.sound-control {
+  cursor: pointer;
+  padding-left: 310px;
+  display: flex;
+}
+/* backward and forward */
+.music-control {
+  height: 2em;
+  position: fixed;
+  top: 120px;
+  left: 260px;
+}
+.music-control__backward,
+.music-control__forward {
+  width: 1.5em;
+  height: 1.5em;
+  margin-inline-start: 20px;
+}
+.music-control__backward {
+  padding-right: 50px;
+}
+.music-control__forward {
+  padding-right: 80px;
+}
+/* mute button */
+.music-control__mute {
+  padding: 0px;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  background: none;
+  display: flex;
+}
+/* info button */
+.infobutton {
+  cursor: pointer;
+  border: none;
+  background: none;
+  appearance: none;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+.info {
+  transform: rotate(339deg);
+  padding-top: 27px;
+  padding-left: 34px;
+}
+
+#tracks-info {
+  width: 244px;
+  visibility: hidden;
+  opacity:0;
+}
+
+#tracks p {
+  width: 281px;
+  margin-bottom: 0;
+}
+
+/*letter info */
+#track-info{
+  position: fixed;
+  top: 3vh;
+  right: 2vw;
+  padding: 10px;
+  color: white;
+  transition: color 2.5s ease 0s;
+}
+
+#track-title {
+  margin: 0 0 0.1em 0;
+  font-size: 1em;
+}
+#track-date {
+  margin: 0 0 0.1em 0;
+  font-size: 1em;
+}
+#track-read {
+  margin: 0 0 0.1em 0;
+  font-size: 1em;
+}
+
+/* next and previous buttons */
+.arrow {
+  position: absolute;
+  top: calc(50% - 2.5em);
+  background: none;
+  border: 0;
+  width: 5em;
+  height: 5em;
+  cursor: pointer;
+}
+.arrow:hover {
+  text-decoration: underline;
+}
+.arrow.left {
+  left: 5em;
+  transform: rotate(-90deg);
+}
+.arrow.right {
+  right: 5em;
+  transform: rotate(+90deg);
+}
+
+/* progress bar and time */
+.music-container {
+  position: fixed;
+  bottom: 5vh;
+  left: 50vw;
+  transform: translateX(-50%);
+}
+.music-player {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 1268px;
+}
+.music-bar {
+  /* background: rgb(241, 241, 241); */
+  stroke-width: 1;
+  height: 2px;
+  width: 100%;
+}
+.music-bar:hover {
+  cursor: pointer;
+}
+.music-bar #length {
+  width: 0%;
+  background: #605f6b;
+  height: 100%;
+  transition: width linear 200ms;
+}
+.music-time {
+  display: flex;
+  flex-flow: row wrap;
+}
+.music-time__last {
+  margin-left: auto;
+}
+
+/* asterisks */
+.play {
+  cursor: pointer;
+  width: 7vw;
+  stroke-width: 0.3px;
+  stroke: none;
+  /* animation: fadein 7s;
+    transition: transform 2000ms; */
+}
+.play:hover {
+  stroke-width: 0.3px;
+  stroke: none;
+  /* animation: infinite-rotation 3500ms linear forwards infinite;
+    transform: rotate(360deg);
+    transition: transform 2000ms; */
+}
+
+/* play button animations */
+
+
+/* @keyframes infinite-rotation {
+    from {
+      transform: rotate3d(0);
+    }
+    to {
+      transform: rotate3d(0, 0, 1, 360deg);
+    }
+  }
+
+ @keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+  } */
+
+#episode1 {
+  fill: blue;
+  position: fixed;
+  bottom: 9vh;
+  left: 81vw;
+}
+#episode2 {
+  fill: blue;
+  position: fixed;
+  bottom: 12vh;
+  left: 73vw;
+}
+#episode3 {
+  fill: blue;
+  position: fixed;
+  bottom: 9vh;
+  left: 64vw;
+}
+#episode4 {
+  fill: blue;
+  position: fixed;
+  bottom: 12vh;
+  left: 57vw;
+}
+#episode5 {
+  fill: blue;
+  position: fixed;
+  bottom: 12vh;
+  left: 48vw;
+  rotate: 107deg;
+}
+#episode6 {
+  fill: blue;
+  position: fixed;
+  bottom: 12vh;
+  left: 38vw;
+}
+#episode7 {
+  fill: blue;
+  position: fixed;
+  bottom: 13vh;
+  left: 28vw;
+}
+#episode8 {
+  fill: blue;
+  position: fixed;
+  bottom: 16vh;
+  left: 19vw;
+}
+#episode9 {
+  fill: blue;
+  position: fixed;
+  bottom: 12vh;
+  left: 9vw;
+}
+#episode10 {
+  fill: blue;
+  position: fixed;
+  bottom: 29vh;
+  left: 84vw;
+}
+#episode11 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 28vh;
+  left: 75vw;
+}
+#episode12 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 25vh;
+  left: 66vw;
+}
+#episode13 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 30vh;
+  left: 58vw;
+}
+#episode14 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 30vh;
+  left: 49vw;
+}
+#episode15 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 29vh;
+  left: 40vw;
+}
+#episode16 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 28vh;
+  left: 32vw;
+  rotate: 70deg;
+}
+#episode17 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 33vh;
+  left: 24vw;
+}
+#episode18 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 31vh;
+  left: 16.5vw;
+}
+#episode19 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 29vh;
+  left: 7.5vw;
+}
+#episode20 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 47vh;
+  left: 83vw;
+}
+#episode21 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 46vh;
+  left: 74vw;
+}
+#episode22 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 42vh;
+  left: 65vw;
+}
+#episode23 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 46vh;
+  left: 56vw;
+}
+#episode24 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 45vh;
+  left: 47vw;
+  rotate: 58deg;
+}
+#episode25 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 45vh;
+  left: 38vw;
+}
+#episode26 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 48vh;
+  left: 30vw;
+}
+#episode27 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 48vh;
+  left: 20vw;
+}
+#episode28 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 44vh;
+  left: 12vw;
+}
+#episode29 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 60vh;
+  left: 78vw;
+}
+#episode30 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 58vh;
+  left: 69vw;
+}
+#episode31 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 57vh;
+  left: 61vw;
+}
+#episode32 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 60vh;
+  left: 52vw;
+}
+#episode33 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 59vh;
+  left: 43vw;
+}
+#episode34 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 61vh;
+  left: 35vw;
+}
+#episode35 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 61vh;
+  left: 27vw;
+  rotate: 7deg;
+}
+#episode36 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 63vh;
+  left: 17vw;
+}
+#episode37 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 58vh;
+  left: 9vw;
+}
+#episode38 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 75vh;
+  left: 76vw;
+}
+#episode39 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 78vh;
+  left: 67vw;
+}
+#episode40 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 74vh;
+  left: 59vw;
+}
+#episode41 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 74vh;
+  left: 50vw;
+  rotate: 8deg;
+}
+#episode42 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 74vh;
+  left: 40vw;
+}
+#episode43 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 76vh;
+  left: 32vw;
+}
+#episode44 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 76vh;
+  left: 23vw;
+}
+
+/* mobile view */
+@media all and (max-width: 960px) {
+  .c-containter {
+    display: block;
+    overflow: auto;
+  }
+
+  .music-container {
+    flex-flow: column wrap;
+    max-height: inherit;
+    max-width: 270px;
+    margin: 0 auto;
+    overflow: auto;
+  }
+
+  .music-player {
+    width: 100%;
+    max-width: 100%;
+  }
+  .music-player__title {
+    font-size: 1em;
+  }
+  .music-player__author {
+    font-size: 1em;
+  }
+
+  .arrows {
+    position: absolute;
+    /* top: 20px; */
+    left: 20px;
+    flex: 1 1 100%;
+    color: #605f6b;
+    /* max-width: 270px;
+      max-height: 270px; */
+  }
+
+  .arrow {
+    color: #605f6b;
+    position: absolute;
+    top: calc(90% - 1.5em);
+    height: 3em;
+  }
+  .arrow left p {
+    color: #605f6b;
+    left: 5em;
+    transform: rotate(-90deg);
+    margin-top: 0;
+    margin-bottom: 0.3em;
+  }
+  .arrow right p {
+    color: #605f6b;
+    right: 5em;
+    transform: rotate(-90deg);
+  }
+
+  .music-control__play {
+    width: 2.2em;
+    height: 2.2em;
+  }
+}
