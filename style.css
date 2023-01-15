@@ -608,6 +608,9 @@ input[type="range"]{
 
 /* mobile view */
 @media all and (max-width: 960px) {
+  .cursor-title { 
+    display: none;
+  }
   .top-nav-2 {
     display: block;
     position: fixed;
@@ -632,7 +635,7 @@ input[type="range"]{
    left: 4vw;
   }
 #episode1 {
-  bottom: 13vh;
+  bottom: 8vh;
   left: 79vw;
 }
 #episode2 {
@@ -644,7 +647,7 @@ input[type="range"]{
   left: 43vw;
 }
 #episode4 {
-  bottom: 10vh;
+  bottom: 9vh;
   left: 25vw;
 }
 #episode5 {
@@ -653,8 +656,8 @@ input[type="range"]{
   rotate: 107deg;
 }
 #episode6 {
-  bottom: 19vh;
-  left: 80vw;
+  bottom: 17vh;
+  left: 77vw;
 }
 #episode7 {
   bottom: 19vh;
@@ -665,16 +668,16 @@ input[type="range"]{
   left: 43vw;
 }
 #episode9 {
-  bottom: 20vh;
-  left: 28vw;
+  bottom: 18vh;
+  left: 23vw;
 }
   #episode10 {
     bottom: 21vh;
     left: 10vw;
 }
   #episode11 {
-    bottom: 29vh;
-    left: 80vw;
+    bottom: 25vh;
+    left: 81vw;
   }
   #episode12 {
     bottom: 26vh;
@@ -685,7 +688,7 @@ input[type="range"]{
     left: 50vw;
   }
   #episode14 {
-    bottom: 27vh;
+    bottom: 25vh;
     left: 35vw;
   }
   #episode15 {
@@ -697,24 +700,26 @@ input[type="range"]{
     left: 4vw;
   }
   #episode17 {
-    bottom: 35vh;
-    left: 39vw;
+    bottom: 38vh;
+    left: 9vw;
+    rotate: 9deg;
   }
   #episode18 {
     bottom: 37vh;
     left: 23.5vw;
   }
   #episode19 {
-    bottom: 36vh;
-    left: 7.5vw;
+    bottom: 33vh;
+    left: 38.5vw;
+    rotate: 22deg;
   }
   #episode20 {
-    bottom: 36vh;
-    left: 70vw;
+    bottom: 35vh;
+    left: 54vw;
   } 
   #episode21 {
-    bottom: 35vh;
-    left: 57vw;
+    bottom: 33vh;
+    left: 68vw;
   }
   #episode22 {
     bottom: 36vh;
