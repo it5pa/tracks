@@ -634,46 +634,48 @@ input[type="range"]{
   #track-info{
    left: 4vw;
   }
-#episode1 {
-  bottom: 8vh;
-  left: 79vw;
-}
-#episode2 {
-  bottom: 10vh;
-  left: 61vw;
-}
-#episode3 {
-  bottom: 10.5vh;
-  left: 43vw;
-}
-#episode4 {
-  bottom: 9vh;
-  left: 25vw;
-}
-#episode5 {
-  bottom: 11vh;
-  left: 7vw;
-  rotate: 107deg;
-}
-#episode6 {
-  bottom: 17vh;
-  left: 77vw;
-}
-#episode7 {
-  bottom: 19vh;
-  left: 57vw;
-}
-#episode8 {
-  bottom: 18vh;
-  left: 43vw;
-}
-#episode9 {
-  bottom: 18vh;
-  left: 23vw;
-}
+  #episode1 {
+    bottom: 11vh;
+    left: 81vw;
+    rotate: 9deg;
+  }
+  #episode2 {
+    bottom: 10vh;
+    left: 61vw;
+  }
+  #episode3 {
+    bottom: 10.5vh;
+    left: 43vw;
+  }
+  #episode4 {
+    bottom: 9vh;
+    left: 25vw;
+  }
+  #episode5 {
+    bottom: 11vh;
+    left: 7vw;
+    rotate: 107deg;
+  }
+  #episode6 {
+    bottom: 18vh;
+    left: 74vw;
+    rotate: -12deg;
+  }
+  #episode7 {
+    bottom: 19vh;
+    left: 57vw;
+  }
+  #episode8 {
+    bottom: 18vh;
+    left: 43vw;
+  }
+  #episode9 {
+    bottom: 18vh;
+    left: 23vw;
+  }
   #episode10 {
-    bottom: 21vh;
-    left: 10vw;
+    bottom: 20vh;
+    left: 9vw;
 }
   #episode11 {
     bottom: 25vh;
@@ -692,8 +694,8 @@ input[type="range"]{
     left: 35vw;
   }
   #episode15 {
-    bottom: 30vh;
-    left: 19vw;
+    bottom: 28vh;
+    left: 22vw;
   }
   #episode16 {
     bottom: 28vh;
