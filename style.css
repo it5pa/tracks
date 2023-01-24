@@ -667,23 +667,24 @@ input[type="range"]{
     left: 37vw;
   }
   #episode27 {
-    bottom: 47vh;
-    left: 22vw;
+    bottom: 47.6vh;
+    left: 19.1vw;
   }
   #episode28 {
-    bottom: 46vh;
-    left: 6vw;
+    bottom: 49vh;
+    left: 4.3vw;
+    transform: rotate(-9deg);
   }
   #episode29 {
-    bottom: 52vh;
+    bottom: 53.3;
     left: 82vw;
   }
   #episode30 {
-    bottom: 52vh;
+    bottom: 54.4vh;
     left: 64vw;
   }
   #episode31 {
-    bottom: 50.5vh;
+    bottom: 52.1vh;
     left: 47vw;
   }
   #episode32 {
@@ -691,16 +692,18 @@ input[type="range"]{
     left: 32vw;
   }
   #episode33 {
-    bottom: 60vh;
-    left: 75vw;
+    bottom: 60.9vh;
+    left: 76.3vw;
+    }
   }
   #episode34 {
-    bottom: 60vh;
+    bottom: 61.8vh;
     left: 57vw;
+    transform: rotate(9deg);
   }
   #episode35 {
-    bottom: 59vh;
-    left: 39vw;
+    bottom: 60.4vh;
+    left: 39.3vw;
     rotate: 7deg;
   }
   #episode36 {
@@ -708,33 +711,34 @@ input[type="range"]{
     left: 22vw;
   }
   #episode37 {
-    bottom: 56vh;
-    left: 9vw;
+    bottom: 58vh;
+    left: 6vw;
+    transform: rotate(5deg);
   }
   #episode38 {
-    bottom: 71vh;
-    left: 84vw;
+    bottom: 71.3vh;
+    left: 80vw;
   }
   #episode39 {
-    bottom: 69vh;
-    left: 66vw;
+    bottom: 69.8vh;
+    left: 62vw;
   }
   #episode40 {
-    bottom: 67vh;
-    left: 48vw;
+    bottom: 69vh;
+    left: 44.4vw;
   }
   #episode41 {
-    bottom: 66vh;
+    bottom: 67h;
     left: 27vw;
     rotate: 8deg;
   }
   #episode42 {
-    bottom: 66vh;
+    bottom: 68.1vh;
     left: 10vw;
   }
   #episode43 {
-    bottom: 75vh;
-    left: 58vw;
+    bottom: 76.9vh;
+    left: 55vw;
   }
   #episode44 {
     bottom: 80vh;
