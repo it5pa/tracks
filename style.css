@@ -1,0 +1,743 @@
+
+@font-face {
+  font-family: "Arial Narrow";
+  src: url(./assets/fonts/Arial-Narrow.ttf) format("truetype"), format("ttf");
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* general */
+.cursor-title {
+  margin-left: 16px;
+  pointer-events: none;
+  position: fixed;
+  z-index: 99999;
+}
+
+.rotating {
+  animation-name: rotate;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#bar {
+  width: 100%;
+  opacity: 0;
+  transition: 250ms opacity;
+}
+
+body {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  color: #605f6b;
+}
+
+p {
+  color: #605f6b;
+  margin-top: 0;
+  margin-bottom: 0.3em;
+}
+a {
+  color: inherit;
+  cursor: help;
+}
+h1,
+h2 {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+
+/* top navigation */
+.top-nav {
+  display: flex;
+  left: 5vw;
+  position: fixed;
+  top: 6vh;
+
+  
+}
+.sound-control {
+  cursor: pointer;
+  padding-left: 310px;
+  display: flex;
+}
+
+/* backward and forward */
+.music-control {
+  height: 2em;
+  position: fixed;
+  top: 120px;
+  left: 260px;
+}
+.music-control__backward,
+.music-control__forward {
+  width: 1.5em;
+  height: 1.5em;
+  margin-inline-start: 20px;
+}
+.music-control__backward {
+  padding-right: 50px;
+}
+.music-control__forward {
+  padding-right: 80px;
+}
+
+/* info button */
+.infobutton {
+  cursor: pointer;
+  border: none;
+  background: none;
+  appearance: none;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+
+.infobutton:hover {
+  font-style: italic;
+}
+
+.info {
+  transform: rotate(339deg);
+}
+
+#tracks-info {
+  width: 250px;
+  visibility: hidden;
+  opacity:0;
+}
+
+/* credits */
+
+#credits {
+  cursor: pointer;
+  border: none;
+  background: none;
+  appearance: none;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  position: fixed;
+  right: 3vw;
+  bottom: 4vh;
+}
+
+#credits:hover {
+  font-style: italic;
+}
+
+#credits:hover + body {
+  background: black;
+}
+
+
+#credits-info {
+  width: 100%;
+  max-width: 700px;
+  line-height: 1.3em;
+  text-align: center;
+  visibility: hidden;
+  opacity:0;
+  transition: opacity 2s ease;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 27px;
+  box-sizing: border-box;
+}
+
+#tracks p {
+  width: 281px;
+  margin-bottom: 0;
+}
+
+/*letter info */
+#track-info{
+  position: fixed;
+  top: 3vh;
+  right: 2vw;
+  padding: 10px;
+  color: white;
+  transition: color 2.5s ease 0s;
+}
+
+#track-title {
+  margin: 0 0 0.1em 0;
+  font-size: 1em;
+}
+#track-date {
+  margin: 0 0 0.1em 0;
+  font-size: 1em;
+}
+#track-read {
+  margin: 0 0 0.1em 0;
+  font-size: 1em;
+}
+
+/* progress bar and time */
+.music-container {
+  position: fixed;
+  bottom: 4vh;
+  left: 50vw;
+  transform:translate(-50%);
+  width: 88%;
+}
+
+/* progres-bar */
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%; 
+  background: #777777;
+  cursor: pointer; /* Cursor on hover */
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%; 
+  background: #777777;
+  cursor: pointer; /* Cursor on hover */
+}
+
+input[type="range"]{
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  height: 8px;
+  border-radius: 5px; 
+  background: #9e9e9e38;
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+.music-time {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.music-time__last {
+  margin-left: auto;
+}
+
+/* asterisks */
+.play {
+  cursor: pointer;
+  width: 6.7vw;
+  stroke-width: 0.3px;
+  stroke: none;
+}
+.play:hover {
+  stroke-width: 0.3px;
+  stroke: none;
+}
+
+#episode1 {
+  fill: blue;
+  position: fixed;
+  bottom: 9vh;
+  left: 81vw;
+}
+#episode2 {
+  fill: blue;
+  position: fixed;
+  bottom: 12vh;
+  left: 73vw;
+}
+#episode3 {
+  fill: blue;
+  position: fixed;
+  bottom: 9vh;
+  left: 64vw;
+}
+#episode4 {
+  fill: blue;
+  position: fixed;
+  bottom: 12vh;
+  left: 57vw;
+}
+#episode5 {
+  fill: blue;
+  position: fixed;
+  bottom: 12vh;
+  left: 48vw;
+  rotate: 107deg;
+}
+#episode6 {
+  fill: blue;
+  position: fixed;
+  bottom: 12vh;
+  left: 38vw;
+}
+#episode7 {
+  fill: blue;
+  position: fixed;
+  bottom: 13vh;
+  left: 28vw;
+}
+#episode8 {
+  fill: blue;
+  position: fixed;
+  bottom: 16vh;
+  left: 19vw;
+}
+#episode9 {
+  fill: blue;
+  position: fixed;
+  bottom: 12vh;
+  left: 9vw;
+}
+#episode10 {
+  fill: blue;
+  position: fixed;
+  bottom: 29vh;
+  left: 84vw;
+}
+#episode11 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 28vh;
+  left: 75vw;
+}
+#episode12 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 25vh;
+  left: 66vw;
+}
+#episode13 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 30vh;
+  left: 58vw;
+}
+#episode14 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 30vh;
+  left: 49vw;
+}
+#episode15 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 29vh;
+  left: 40vw;
+}
+#episode16 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 28vh;
+  left: 32vw;
+  rotate: 70deg;
+}
+#episode17 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 33vh;
+  left: 24vw;
+}
+#episode18 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 31vh;
+  left: 16.5vw;
+}
+#episode19 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 29vh;
+  left: 7.5vw;
+}
+#episode20 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 47vh;
+  left: 83vw;
+}
+#episode21 {
+  fill: #00ab79;
+  position: fixed;
+  bottom: 46vh;
+  left: 74vw;
+}
+#episode22 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 42vh;
+  left: 65vw;
+}
+#episode23 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 46vh;
+  left: 56vw;
+}
+#episode24 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 45vh;
+  left: 47vw;
+  rotate: 58deg;
+}
+#episode25 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 45vh;
+  left: 38vw;
+}
+#episode26 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 48vh;
+  left: 30vw;
+}
+#episode27 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 48vh;
+  left: 20vw;
+}
+#episode28 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 44vh;
+  left: 12vw;
+}
+#episode29 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 60vh;
+  left: 78vw;
+}
+#episode30 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 58vh;
+  left: 69vw;
+}
+#episode31 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 57vh;
+  left: 61vw;
+}
+#episode32 {
+  fill: #ff323c;
+  position: fixed;
+  bottom: 60vh;
+  left: 52vw;
+}
+#episode33 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 59vh;
+  left: 43vw;
+}
+#episode34 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 61vh;
+  left: 35vw;
+}
+#episode35 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 61vh;
+  left: 27vw;
+  rotate: 7deg;
+}
+#episode36 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 63vh;
+  left: 17vw;
+}
+#episode37 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 58vh;
+  left: 9vw;
+}
+#episode38 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 75vh;
+  left: 76vw;
+}
+#episode39 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 78vh;
+  left: 67vw;
+}
+#episode40 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 74vh;
+  left: 59vw;
+}
+#episode41 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 74vh;
+  left: 50vw;
+  rotate: 8deg;
+}
+#episode42 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 74vh;
+  left: 40vw;
+}
+#episode43 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 76vh;
+  left: 32vw;
+}
+#episode44 {
+  fill: #cf4794;
+  position: fixed;
+  bottom: 76vh;
+  left: 23vw;
+}
+
+.tracks-as-envelopes{
+  display: none;
+}
+
+.top-nav-2 {
+  display: none;
+}
+
+/* mobile view */
+@media all and (max-width: 960px) {
+  .cursor-title { 
+    display: none;
+  }
+  .top-nav-2 {
+    display: block;
+    position: fixed;
+    top: 2vh;
+    left: 4vw;
+    padding: 10px;
+  }
+  .tracks-as-envelopes {
+    display: block;
+  }
+  #credits {
+    top: 3vh;
+    bottom: unset;
+  }
+  .top-nav {
+    display: none;
+  }
+  .play {
+    width: 12vw;
+  }
+  #track-info{
+   left: 4vw;
+   top: 2vh;
+  }
+#episode1 {
+  bottom: 11.4vh;
+  left: 80.5vw
+}
+#episode2 {
+  bottom: 10vh;
+  left: 61vw;
+}
+#episode3 {
+  bottom: 10.5vh;
+  left: 43vw;
+}
+#episode4 {
+  bottom: 9vh;
+  left: 25vw;
+}
+#episode5 {
+  bottom: 11vh;
+  left: 7vw;
+  rotate: 107deg;
+}
+#episode6 {
+  bottom: 17vh;
+  left: 77vw;
+}
+#episode7 {
+  bottom: 19vh;
+  left: 57vw;
+}
+#episode8 {
+  bottom: 18vh;
+  left: 43vw;
+}
+#episode9 {
+  bottom: 18vh;
+  left: 23vw;
+}
+  #episode10 {
+    bottom: 21vh;
+    left: 10vw;
+}
+  #episode11 {
+    bottom: 25vh;
+    left: 81vw;
+  }
+  #episode12 {
+    bottom: 26vh;
+    left: 64vw;
+  }
+  #episode13 {
+    bottom: 28vh;
+    left: 50vw;
+  }
+  #episode14 {
+    bottom: 25vh;
+    left: 35vw;
+  }
+  #episode15 {
+    bottom: 30vh;
+    left: 19vw;
+  }
+  #episode16 {
+    bottom: 28vh;
+    left: 4vw;
+  }
+  #episode17 {
+    bottom: 38vh;
+    left: 9vw;
+    rotate: 9deg;
+  }
+  #episode18 {
+    bottom: 37vh;
+    left: 23.5vw;
+  }
+  #episode19 {
+    bottom: 33vh;
+    left: 38.5vw;
+    rotate: 22deg;
+  }
+  #episode20 {
+    bottom: 35vh;
+    left: 54vw;
+  } 
+  #episode21 {
+    bottom: 33vh;
+    left: 68vw;
+  }
+  #episode22 {
+    bottom: 36vh;
+    left: 83vw;
+  }
+  #episode23 {
+    bottom: 45vh;
+    left: 83vw;
+  }
+  #episode24 {
+    bottom: 43vh;
+    left: 69vw;
+    rotate: 58deg;
+  }
+  #episode25 {
+    bottom: 42vh;
+    left: 53vw;
+  }
+  #episode26 {
+    bottom: 43vh;
+    left: 37vw;
+  }
+  #episode27 {
+    bottom: 47vh;
+    left: 22vw;
+  }
+  #episode28 {
+    bottom: 46vh;
+    left: 6vw;
+  }
+  #episode29 {
+    bottom: 52vh;
+    left: 82vw;
+  }
+  #episode30 {
+    bottom: 52vh;
+    left: 64vw;
+  }
+  #episode31 {
+    bottom: 50.5vh;
+    left: 47vw;
+  }
+  #episode32 {
+    bottom: 52vh;
+    left: 32vw;
+  }
+  #episode33 {
+    bottom: 60vh;
+    left: 75vw;
+  }
+  #episode34 {
+    bottom: 60vh;
+    left: 57vw;
+  }
+  #episode35 {
+    bottom: 59vh;
+    left: 39vw;
+    rotate: 7deg;
+  }
+  #episode36 {
+    bottom: 59vh;
+    left: 22vw;
+  }
+  #episode37 {
+    bottom: 56vh;
+    left: 9vw;
+  }
+  #episode38 {
+    bottom: 71vh;
+    left: 84vw;
+  }
+  #episode39 {
+    bottom: 69vh;
+    left: 66vw;
+  }
+  #episode40 {
+    bottom: 67vh;
+    left: 48vw;
+  }
+  #episode41 {
+    bottom: 66vh;
+    left: 27vw;
+    rotate: 8deg;
+  }
+  #episode42 {
+    bottom: 66vh;
+    left: 10vw;
+  }
+  #episode43 {
+    bottom: 75vh;
+    left: 58vw;
+  }
+  #episode44 {
+    bottom: 80vh;
+    left: 73vw;
+  }
+}
