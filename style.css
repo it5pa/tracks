@@ -1,7 +1,7 @@
 
 @font-face {
   font-family: "Arial Narrow";
-  src: url(./assets/fonts/Arial-Narrow.ttf) format("truetype"), format("ttf");
+  src: url(./assets/fonts/Arial-Narrow.ttf) format("truetype");
 }
 
 @keyframes rotate {
