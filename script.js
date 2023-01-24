@@ -103,11 +103,9 @@
       audioelement.addEventListener('timeupdate', () => {
         if (audioelement.currentTime === audioelement.duration) {
           bar.value = 0;
-          // audioCurrentTime.innerHTML = '0:00';
-          audioPause(audioelement);
+          play();
         } else {
           bar.value = Math.floor(audioelement.currentTime);
-          // audioCurrentTime.innerHTML = calculateTime(audioelement.currentTime);
         }
       }, false)
 
@@ -133,6 +131,9 @@
       if (audioelement.getAttribute('src') == audio) {
         play();
       } else {
+        if (isPlaying) {
+          play();
+        }
         audioelement.setAttribute('src', audio);
         play();
       }
